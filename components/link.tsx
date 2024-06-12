@@ -1,10 +1,18 @@
+import { useSelector } from 'react-redux'
 import LinkButton from './linkButton'
 
 const Link = () => {
+  // ** Redux
+  const isLargeScreen = useSelector((state: any) => state.screen.isLargeScreen)
+
   return (
     <>
       <section>
-        <div className="grid gap-4 grid-cols-2">
+        <div
+          className={`grid gap-4 ${
+            isLargeScreen ? 'grid-cols-2' : 'grid-cols-1'
+          }`}
+        >
           <LinkButton
             src="/images/icon/github-sign.png"
             label="Github"

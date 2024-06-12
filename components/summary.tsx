@@ -4,6 +4,14 @@ const Summary = () => {
   // ** Redux
   const isLargeScreen = useSelector((state: any) => state.screen.isLargeScreen)
 
+  // ** Handler
+  const handleClickDownloadHWP = (fileName: string, output: string) => {
+    const link = document.createElement('a')
+    link.href = `/hwp/${fileName}`
+    link.download = output
+    link.click()
+  }
+
   return (
     <>
       <section>
@@ -49,6 +57,43 @@ const Summary = () => {
                 Bunny Stream 등 인프라 경험이 있어 인프라 설계 및 구축이
                 가능합니다.
               </li>
+              <li>
+                오픈소스(openEdx) 개발 경험이 있어 글로벌한 스킬을
+                보유하고있습니다.
+              </li>
+              <li>
+                일본 개발 문화 경험이 있어 안정적인 시스템 유지보수, 체계적인
+                문서화, 유닛/통합 테스트에 강합니다.
+              </li>
+              <li>Figma를 통해 화면설계 및 디자인이 가능합니다.</li>
+              <li>
+                해커 출신이라 시큐어 코딩 및 코드 분석 능력이 뛰어납니다.
+                (악성코드 분석 논문 2건 보유)
+              </li>
+              <div>
+                <div
+                  className="text-blue-300 text-sm hover:underline cursor-pointer"
+                  onClick={() =>
+                    handleClickDownloadHWP(
+                      'paper1.hwp',
+                      'YARA를 이용한 여러 룰 파일 패턴 매칭 구현.hwp'
+                    )
+                  }
+                >
+                  YARA를 이용한 여러 룰 파일 패턴 매칭 구현.hwp
+                </div>
+                <div
+                  className="text-blue-300 text-sm hover:underline cursor-pointer"
+                  onClick={() =>
+                    handleClickDownloadHWP(
+                      'paper2.hwp',
+                      'YARA를 이용한 여러 룰 파일 패턴 매칭 속도 개선.hwp'
+                    )
+                  }
+                >
+                  YARA를 이용한 여러 룰 파일 패턴 매칭 속도 개선.hwp
+                </div>
+              </div>
             </ul>
           </div>
         </div>

@@ -13,6 +13,8 @@ import Education from '@/components/education'
 import Certificate from '@/components/certificate'
 import Skill from '@/components/skill'
 import Link from '@/components/link'
+import Etc from '@/components/etc'
+import Career from '@/components/career'
 
 const Home = ({}) => {
   // ** Hooks
@@ -43,6 +45,7 @@ const Home = ({}) => {
         <Divider />
 
         <Title>경력</Title>
+        <Career />
         <Divider />
 
         <Title>기술</Title>
@@ -55,6 +58,10 @@ const Home = ({}) => {
 
         <Title>자격증</Title>
         <Certificate />
+        <Divider />
+
+        <Title>기타</Title>
+        <Etc />
         <Divider />
 
         <Title>링크</Title>

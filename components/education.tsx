@@ -72,23 +72,25 @@ const Education = () => {
               </div>
               <div className="mt-2 text-right">
                 <div
-                  className="text-blue-300 text-sm hover:underline cursor-pointer"
+                  className="text-blue-300 text-sm hover:underline cursor-pointer inline-block"
                   onClick={() =>
                     handleClickDownloadPDF('대구대_졸업증명서_국문.pdf')
                   }
                 >
                   졸업증명서(국문) 다운로드
                 </div>
+                <br />
                 <div
-                  className="text-blue-300 text-sm hover:underline cursor-pointer"
+                  className="text-blue-300 text-sm hover:underline cursor-pointer inline-block"
                   onClick={() =>
                     handleClickDownloadPDF('대구대_졸업증명서_영문.pdf')
                   }
                 >
                   졸업증명서(영문) 다운로드
                 </div>
+                <br />
                 <div
-                  className="text-blue-300 text-sm hover:underline cursor-pointer"
+                  className="text-blue-300 text-sm hover:underline cursor-pointer inline-block"
                   onClick={() =>
                     handleClickDownloadPDF('대구대_성적표_영문.pdf')
                   }

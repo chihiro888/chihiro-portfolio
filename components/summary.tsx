@@ -58,8 +58,8 @@ const Summary = () => {
                 가능합니다.
               </li>
               <li>
-                오픈소스(openEdx) 개발 경험이 있어 글로벌한 스킬을
-                보유하고있습니다.
+                오픈소스(openEdx) 커스텀 개발 경험이 있어 대규모 인프라에 대한
+                지식이 있습니다.
               </li>
               <li>
                 일본 개발 문화 경험이 있어 안정적인 시스템 유지보수, 체계적인
@@ -72,7 +72,7 @@ const Summary = () => {
               </li>
               <div>
                 <div
-                  className="text-blue-300 text-sm hover:underline cursor-pointer"
+                  className="text-blue-300 text-sm hover:underline cursor-pointer inline-block"
                   onClick={() =>
                     handleClickDownloadHWP(
                       'paper1.hwp',
@@ -82,8 +82,9 @@ const Summary = () => {
                 >
                   YARA를 이용한 여러 룰 파일 패턴 매칭 구현.hwp
                 </div>
+                <br />
                 <div
-                  className="text-blue-300 text-sm hover:underline cursor-pointer"
+                  className="text-blue-300 text-sm hover:underline cursor-pointer inline-block"
                   onClick={() =>
                     handleClickDownloadHWP(
                       'paper2.hwp',

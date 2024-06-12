@@ -1,11 +1,17 @@
 import Header from "@/components/header"
 
-const Home = () => {
+const Home = ({}) => {
   return (
     <>
     <Header />
     </>
   )
+}
+
+export async function getStaticProps() {
+  return {
+    props: {},
+  };
 }
 
 export default Home

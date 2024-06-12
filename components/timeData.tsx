@@ -7,8 +7,15 @@ interface TimeDataType {
   title: string
   subTitle: string
   extra?: any
+  mobileExtra?: any
 }
-const TimeData = ({ period, title, subTitle, extra }: TimeDataType) => {
+const TimeData = ({
+  period,
+  title,
+  subTitle,
+  extra,
+  mobileExtra
+}: TimeDataType) => {
   // ** Redux
   const isLargeScreen = useSelector((state: any) => state.screen.isLargeScreen)
 
@@ -43,6 +50,7 @@ const TimeData = ({ period, title, subTitle, extra }: TimeDataType) => {
             <div className="mt-2">
               <div className="text-sm text-slate-500">{period}</div>
             </div>
+            {mobileExtra}
           </div>
         </div>
       )}

@@ -7,8 +7,8 @@ const Skill = () => {
 
   return (
     <section>
-      <div className="mb-10">
-        <div className="grid grid-cols-3">
+      <div className="mb-6">
+        <div className={`${isLargeScreen ? 'grid grid-cols-3' : ''}`}>
           <div className="flex items-start">
             <div className="text-lg font-semibold">Skill</div>
           </div>
@@ -46,7 +46,7 @@ const Skill = () => {
               <RoundBadge label="JIRA" />
               <RoundBadge label="Redmind" />
             </div>
-            <div className="text-sm text-blue-300 text-right">
+            <div className="text-sm text-blue-300 text-right mt-1">
               실무에서 사용한 기술만 기술하였습니다.
             </div>
           </div>
@@ -56,7 +56,7 @@ const Skill = () => {
       <div className="w-full h-px bg-slate-200"></div>
 
       <div className="mt-5 mb-10">
-        <div className="grid grid-cols-3">
+        <div className={`${isLargeScreen ? 'grid grid-cols-3' : ''}`}>
           <div className="flex items-start">
             <div className="text-lg font-semibold">Domain</div>
           </div>

@@ -11,7 +11,7 @@ const Education = () => {
 
   return (
     <section>
-      <div className="mb-10">
+      <div className="mb-6">
         <TimeData
           period="2012.03 ~ 2017.02"
           title="대구대학교 (4년제)"
@@ -53,6 +53,47 @@ const Education = () => {
                   }
                 >
                   성적증명서(영문)
+                </div>
+              </div>
+            </>
+          }
+          mobileExtra={
+            <>
+              <div className="flex mt-2 space-x-2">
+                <div className="border border-blue-500 text-blue-500 px-3 py-1 text-sm">
+                  수석졸업
+                </div>
+                <div className="border border-blue-500 text-blue-500 px-3 py-1 text-sm">
+                  1년 조기졸업
+                </div>
+                <div className="border border-blue-500 text-blue-500 px-3 py-1 text-sm">
+                  학점 4.3 / 4.5
+                </div>
+              </div>
+              <div className="mt-2 text-right">
+                <div
+                  className="text-blue-300 text-sm hover:underline cursor-pointer"
+                  onClick={() =>
+                    handleClickDownloadPDF('대구대_졸업증명서_국문.pdf')
+                  }
+                >
+                  졸업증명서(국문) 다운로드
+                </div>
+                <div
+                  className="text-blue-300 text-sm hover:underline cursor-pointer"
+                  onClick={() =>
+                    handleClickDownloadPDF('대구대_졸업증명서_영문.pdf')
+                  }
+                >
+                  졸업증명서(영문) 다운로드
+                </div>
+                <div
+                  className="text-blue-300 text-sm hover:underline cursor-pointer"
+                  onClick={() =>
+                    handleClickDownloadPDF('대구대_성적표_영문.pdf')
+                  }
+                >
+                  성적증명서(영문) 다운로드
                 </div>
               </div>
             </>

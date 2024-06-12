@@ -12,6 +12,7 @@ import TimeData from '@/components/timeData'
 import Education from '@/components/education'
 import Certificate from '@/components/certificate'
 import Skill from '@/components/skill'
+import Link from '@/components/link'
 
 const Home = ({}) => {
   // ** Hooks
@@ -54,6 +55,10 @@ const Home = ({}) => {
 
         <Title>자격증</Title>
         <Certificate />
+        <Divider />
+
+        <Title>링크</Title>
+        <Link />
       </div>
 
       <div className="mb-12"></div>

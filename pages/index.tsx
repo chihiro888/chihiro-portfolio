@@ -1,8 +1,17 @@
+import Divider from '@/components/divider'
 import Header from '@/components/header'
 import Profile from '@/components/profile'
+import Summary from '@/components/summary'
+import Title from '@/components/title'
 import { setIsLargeScreen } from '@/store/screen'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleDot } from '@fortawesome/free-solid-svg-icons'
+import TimeData from '@/components/timeData'
+import Education from '@/components/education'
+import Certificate from '@/components/certificate'
+import Skill from '@/components/skill'
 
 const Home = ({}) => {
   // ** Hooks
@@ -13,12 +22,13 @@ const Home = ({}) => {
       dispatch(setIsLargeScreen(window.innerWidth >= 768))
     }
 
-    // 초기화 및 창 크기 변경 이벤트 리스너 추가
     handleResize()
+
+    // add listener
     window.addEventListener('resize', handleResize)
 
-    // 컴포넌트가 unmount될 때 이벤트 리스너 제거
     return () => {
+      // remove listener
       window.removeEventListener('resize', handleResize)
     }
   }, [])
@@ -27,6 +37,26 @@ const Home = ({}) => {
     <>
       <Header />
       <Profile />
+      <div className="container mx-auto px-6">
+        <Summary />
+        <Divider />
+
+        <Title>경력</Title>
+        <Divider />
+
+        <Title>기술</Title>
+        <Skill />
+        <Divider />
+
+        <Title>학력</Title>
+        <Education />
+        <Divider />
+
+        <Title>자격증</Title>
+        <Certificate />
+      </div>
+
+      <div className="mb-12"></div>
     </>
   )
 }

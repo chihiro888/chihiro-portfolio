@@ -3,12 +3,14 @@ import { faCircleDot } from '@fortawesome/free-solid-svg-icons'
 import { useSelector } from 'react-redux'
 
 interface TimeDataType {
-  period: string
-  title: string
-  subTitle: string
+  period?: string
+  title?: string
+  subTitle?: string
   extra?: any
   mobileExtra?: any
   months?: string
+  company?: string
+  position?: string
 }
 const TimeData = ({
   period,
@@ -16,7 +18,9 @@ const TimeData = ({
   subTitle,
   extra,
   mobileExtra,
-  months
+  months,
+  company,
+  position
 }: TimeDataType) => {
   // ** Redux
   const isLargeScreen = useSelector((state: any) => state.screen.isLargeScreen)
@@ -31,7 +35,9 @@ const TimeData = ({
               className="text-[#3d6aff] text-[12px] mr-5 mt-1"
             />
             <div className="text-sm">
-              <div>{period}</div>
+              <div className="text-lg font-semibold">{company}</div>
+              <div className="text-base">{position}</div>
+              <div className="mt-0.5 text-slate-500">{period}</div>
               <div className="text-[#3d6aff]">{months}</div>
             </div>
           </div>
@@ -50,6 +56,8 @@ const TimeData = ({
             />
           </div>
           <div>
+            <div className="text-lg font-semibold">{company}</div>
+            <div className="text-base">{position}</div>
             <div className="text-lg font-semibold">{title}</div>
             <div className="text-base">{subTitle}</div>
             <div className="mt-2">

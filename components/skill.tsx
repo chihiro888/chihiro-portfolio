@@ -34,6 +34,7 @@ const Skill = () => {
               <RoundBadge label="Recuruite2 FW" />
               <RoundBadge label="PHP" />
               <RoundBadge label="Laravel" />
+              <RoundBadge label="Swagger" />
               <RoundBadge label="C# Winform" />
               <RoundBadge label="MongoDB" />
               <RoundBadge label="ElasticSearch" />
@@ -44,6 +45,9 @@ const Skill = () => {
               <RoundBadge label="Jenkins" />
               <RoundBadge label="Docker" />
               <RoundBadge label="Vagrant" />
+              <RoundBadge label="Material UI" />
+              <RoundBadge label="Bootstrap" />
+              <RoundBadge label="Vuetify" />
               <RoundBadge label="Slack" />
               <RoundBadge label="Notion" />
               <RoundBadge label="JIRA" />
@@ -67,7 +71,6 @@ const Skill = () => {
             <div className="flex flex-wrap mt-2 items-start">
               <RoundBadge label="교육" />
               <RoundBadge label="금융" />
-              <RoundBadge label="회계" />
             </div>
           </div>
         </div>
